@@ -1,5 +1,6 @@
 # azure-file-shares-permissions
 <p align="center">
+<img src="https://i.imgur.com/vtSRnet.png" alt="Creating Network File Shares and Permissions"/>
 </p>
 
 <h1> Creating Network File Shares and Permissions</h1>
