@@ -89,9 +89,30 @@ We do not have permission to create text documents In this file. We can only vie
 <h3>Step 3: Create an “ACCOUNTANTS” Security Group and Assign Permissions</h3>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Return to the DC-1 server and navigate to Active Directory. Create a security group named "ACCOUNTANTS." Then, modify the permissions for the "accounting" folder previously created, assigning the "ACCOUNTANTS" group with "Read/Write" permissions. 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img src="https://i.imgur.com/H927xJZ.png" height="80%" width="80%" alt="ACCOUNTANTS."/>
+<img src="https://i.imgur.com/o4qSOQk.png" height="80%" width="80%" alt="Read/Write"/>
+<img src="https://i.imgur.com/W8ODtFS.png" height="80%" width="80%" alt="accounting"/>
+</p>
+<p>
+As a regular user on Client-1, attempting to access the "accountants" folder should fail because the user lacks the necessary permissions.
+</p>
+<p>
+<img src="https://i.imgur.com/oMfDY9m.png" height="80%" width="80%" alt="lacks"/>
+</p>
+<p>
+After logging out of Client-1, navigate to the DC-1 server and add the user to the "ACCOUNTANTS" Security Group. 
+</p>
+<p>
+<img src="https://i.imgur.com/0SMIL3M.png" height="80%" width="80%" alt="Security"/>
+</p>
+<p>
+Upon signing back into Client-1 as the regular user and attempting to access the "accounting" share in \DC-1, the access should now be successful since the user has been granted the appropriate permissions through membership in the "ACCOUNTANTS" group.
+</p>
+<p>
+<img src="https://i.imgur.com/8jsTUzL.png" height="80%" width="80%" alt="regular user"/>
+<img src="https://i.imgur.com/u5e1y4h.png" height="80%" width="80%" alt="access"/>
 </p>
 <br />
